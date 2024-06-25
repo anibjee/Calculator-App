@@ -6,10 +6,13 @@ function clearDisplay() {
   display.value = "";
 }
 function BackSpace() {
-  display.value = display.value.slice(0,display.value.length - 1);
+  display.value = display.value.slice(0, display.value.length - 1);
 }
 function calculate() {
   try {
+    if(display.value==="Error"){
+        throw error;
+    }
     display.value = eval(display.value);
   } catch (error) {
     display.value = "Error";
